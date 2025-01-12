@@ -1003,4 +1003,13 @@ public class AppScriptFunctions : ScriptFunctions
         }
         Task.Run(async () => await Task.Delay(milliseconds)).Wait();
     }
+
+    /// <summary>
+    /// Returns the current wolvenkit version
+    /// </summary>
+    /// <retruns>string</retruns>
+    public virtual string Version()
+    {
+        return _settingsManager.GetVersionNumber()
+    }
 }
